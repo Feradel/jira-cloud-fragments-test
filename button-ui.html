@@ -1,9 +1,12 @@
 <button id="assign-button" class="aui-button aui-button-primary">Assign to me</button>
 <script src="https://connect-cdn.atl-paas.net/all.js"></script>
 <script>
-    console.log(AP.user)
     var button = document.getElementById('assign-button');
     button.addEventListener('click', function () {
-        console.log(AP.user)
+        AP.context.getContext(function(response){
+          console.log("Jira Issue Key", response.issue_key);
+          console.log("Confluence page id", response.pageId);
+          console.log("license status", response.license);
+        });
     });
 </script>
