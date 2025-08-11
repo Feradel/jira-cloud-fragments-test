@@ -4,6 +4,11 @@
   // Replace 'your-button-id' with the actual ID of your button
   document.getElementById('assign-button').addEventListener('click', function () {
     const issueKey = JIRA.Issue.getIssueKey(); // Gets the current issue key
+    
+    console.log("Script loaded");
+    console.log("User accountId:", accountId);
+    console.log("Issue key:", issueKey);
+
 
     AP.request({
       url: `/rest/api/3/issue/${issueKey}/assignee`,
