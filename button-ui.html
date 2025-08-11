@@ -1,1 +1,15 @@
 <button id="assign-button" class="aui-button aui-button-primary">Assign to me</button>
+<script>
+  console.log("✅ Script loaded");
+
+  const button = document.getElementById('assign-button');
+  if (button) {
+    console.log("✅ Button found");
+    button.addEventListener('click', function () {
+      console.log("✅ Button clicked");
+      alert("Button works!");
+    });
+  } else {
+    console.error("❌ Button not found");
+  }
+</script>
